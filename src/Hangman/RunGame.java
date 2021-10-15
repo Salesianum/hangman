@@ -26,8 +26,8 @@ package Hangman;
 
 public class RunGame {
     //THE SECRET WORD IS THE WORD THAT YOU SHOULD TRY AND GUESS
-    public static void play(String secretWord){
-        
+    public static boolean play(){
+        String secretWord = LoadFile.getWord(); 
 
 
     }

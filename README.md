@@ -18,34 +18,40 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
 
 
+MAIN PROGRAM BLOCK APP.JAVA 
+
+The main program block of Hangman (App.java) should use a while loop to implement the following functionality when run:
+
+Running App.java should begin a “session” in which the user will play one or more games of Hangman.
+The user should always play at least one game of Hangman.
+
+After each game, the user should be prompted if they want to play again.
+
+Once the user indicates that they are ready to stop playing, win-loss summary stats for the “session” should be printed.
+Use the return value of RunGame.play, which indicates a win or loss in a game, to accumulate a win-loss count for the “session”.
+
 RUN GAME - 
 
-After the initial setup of the game, it should use a loop (we highly recommend the while loop - see note about while loops) to run each round of the game (where “round” means each time the user guesses a letter). In this loop it does the following:
-Tracks: the letters guessed, the current hangmanWord, the number of misses left
-Calls createDisplayString, handleUserInputLetterGuess, and processUserGuess.
-Prints out whether the currently guessed letter is in the word.
-Determines whether the game is over, where the user:
-Won if there are no more "_" in hangmanWord
-Lost if missesLeft <= 0
-Prints the ending message to the user.
-When the game is over, returns whether the user won.
+PLAY -- 
 
-Main Program Block - 
+play() -- 
 
-The main program block of Hangman.py should use a while loop to implement the following functionality when Hangman.py is run:
-
-
-Running Hangman.py should begin a “session” in which the user will play one or more games of Hangman.
-The user should always play at least one game of Hangman.
-After each game, the user should be prompted if they want to play again.
-Once the user indicates that they are ready to stop playing, win-loss summary stats for the “session” should be printed.
-Use the return value of runGame, which indicates a win or loss in a game, to accumulate a win-loss count for the “session”.
+After the initial setup of the game, it should use a loop (we highly recommend the while loop) to run each round of the game (where “round” means each time the user guesses a letter). 
+In this loop it does the following:
+    Tracks: the letters guessed, the current hangmanWord, the number of misses left
+    Calls createDisplayString, handleUserInputLetterGuess, and processUserGuess.
+    Prints out whether the currently guessed letter is in the word.
+    Determines whether the game is over, where the user:
+        Won if there are no more "_" in hangmanWord
+        Lost if missesLeft <= 0
+        Prints the ending message to the user.
+        When the game is over, returns whether the user won.
 
 
+PROCESS USER GUESS -- 
 
 processUserGuess(guessedLetter, secretWord, hangmanWord, missesLeft) -- 
 Takes the user's guess, the secret word, the user's current progress on the word, and the number of misses left and updates the current game state of hangmanWord, number of misses left, and whether the user missed.
-
 
 Parameters:
 
@@ -110,7 +116,7 @@ The user will input a string of length 1
 
 createDisplayString(lettersGuessed, missesLeft, hangmanWord) -- 
 
-Creates the string that will be displayed to the user, using the information in the parameters. Ensure that the display string contains spaces between characters in the right places as shown in the example below.
+Creates the string that will be displayed to the user, using the information in the parameters. Ensure that the display string contains spaces between characters in the right places.
 
 
 Parameters:

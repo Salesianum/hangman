@@ -18,9 +18,8 @@ package Hangman;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        String secretWord = LoadFile.getWord(); //SHOULD BE FIRST LINE OF WHILE LOOP.
 
-        RunGame.play(secretWord); //this will run your game and return true or false.
+        RunGame.play(); //this will run your game and return true or false.
 
 
     }

@@ -1,5 +1,7 @@
 package Hangman;
 
+import java.util.ArrayList;
+
 /**
  *  THIS WILL RUN THE GAME LOGIC. KEEPING TRACK OF THE ANSWER, NUMBER OF GUESSES, GUESSES MADE,
  *  AND PROGRESS IN GUESSING THE WORD.
@@ -52,7 +54,7 @@ public class RunGame {
      * 
      * */
 
-    public static String createDisplayString(String[] lettersGuessed, int missesRemaining, String[] hangmanWord){
+    public static String createDisplayString(ArrayList<String> lettersGuessed, int missesRemaining, ArrayList<String> hangmanWord){
         
     }
 
@@ -71,7 +73,7 @@ public class RunGame {
      */
 
 
-    public static String handleUserInputLetterGuess(String[] lettersGuessed, String displayString){
+    public static String handleUserInputLetterGuess(ArrayList<String> lettersGuessed, String displayString){
 
     }
 
@@ -89,12 +91,12 @@ public class RunGame {
      * Returns ["c", "a", "_"]
      */
 
-    public static String[] updateHangmanWord(String guessedLetter, String secretWord, String[] hangmanWord){
+    public static ArrayList<String> updateHangmanWord(String guessedLetter, String secretWord, ArrayList<String> hangmanWord){
 
 
     }
 
-    public static String[] processUserGuess(String guessedLetter, String secretWord, int missesLeft){
+    public static ArrayList<String> processUserGuess(String guessedLetter, String secretWord, int missesLeft){
 
     }
 

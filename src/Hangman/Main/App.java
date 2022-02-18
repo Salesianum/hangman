@@ -22,8 +22,6 @@ import java.util.Scanner;
 public class App {
     public static Scanner readInput = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
-        Integer num = 5;
-        num.intValue();
         boolean winLose;
         boolean continuePlaying = true;
         while(continuePlaying){

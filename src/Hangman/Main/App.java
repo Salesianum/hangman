@@ -1,4 +1,5 @@
-package Hangman;
+package Hangman.Main;
+
 /**
  * DO NOT MAKE CHANGES TO THE FIRST LINE OF CODE.
  * DO NOT MAKE CHANGES TO THE FIRST LINE OF CODE.
@@ -17,10 +18,16 @@ package Hangman;
 
 
 public class App {
+   
     public static void main(String[] args) throws Exception {
-
-        RunGame.play(); //this will run your game and return true or false.
-
-
+        boolean winLose;
+        boolean continuePlaying = true;
+        while(continuePlaying){
+            //this will run your game and return true or false.
+            winLose = RunGame.play(); 
+            //TODO: calc win / loss
+            //TODO: do you want to play again?
+        }
+        //TODO: Print Win / Loss
     }
 }

@@ -1,4 +1,4 @@
-package Hangman;
+package Hangman.Main;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *  AND PROGRESS IN GUESSING THE WORD.
  * 
  *   1. During the game it prints out whether the currently guessed letter is in the word by printing
- *      "you missed: LETTER not in word", where LETTER is replaced by the letter the user guessed.
+ *      "you missed: LETTER not in word", where LETTER is replaced by the letter the user guess.
  * 
  *   2. When the game is over according to processUserGuess, it determines if the user won or not,
  *      prints out the corresponding text: 
@@ -29,9 +29,14 @@ import java.util.ArrayList;
 public class RunGame {
     //THE SECRET WORD IS THE WORD THAT YOU SHOULD TRY AND GUESS
     public static boolean play(){
-        String secretWord = LoadFile.getWord(); 
+        //initialize any variables you may need
+        String secretWord = LoadFile.getWord();
+
+        //begin the while loop to play the game.
 
 
+        //return true on win or false on loss.        
+        return false;
     }
 
     /** 
@@ -55,7 +60,9 @@ public class RunGame {
      * */
 
     public static String createDisplayString(ArrayList<String> lettersGuessed, int missesRemaining, ArrayList<String> hangmanWord){
-        
+        //TODO take all contents of the game state and print it in a legible state
+        //it should look similar to the example above.
+        return null;
     }
 
     /**
@@ -74,11 +81,15 @@ public class RunGame {
 
 
     public static String handleUserInputLetterGuess(ArrayList<String> lettersGuessed, String displayString){
-
+        //TODO prompt a user guess and verify it is a valid guess.
+        //Return the valid guess as a string.
+        String guess = "";
+       
+        return guess;
     }
 
     /**
-     * Returns: Type: list
+     * Returns: Type: ArrayList<String>
      *      The new hangmanWord, which is a list of strings where each string is a single letter either corresponding
      *      to the same letter in secretWord or '_' if the user has not guessed the letter yet in the game.
      * 
@@ -92,12 +103,43 @@ public class RunGame {
      */
 
     public static ArrayList<String> updateHangmanWord(String guessedLetter, String secretWord, ArrayList<String> hangmanWord){
-
-
+        //TODO take the original hangman word and update it to include the guessed letter
+        //for each index of the letter
+        return hangmanWord;
     }
 
-    public static ArrayList<String> processUserGuess(String guessedLetter, String secretWord, int missesLeft){
 
+    /**
+     * processUserGuess(guessedLetter, secretWord, hangmanWord, missesLeft) -- 
+Takes the user's guess, the secret word, the user's current progress on the word, and the number of misses left and updates the current game state of hangmanWord, number of misses left, and whether the user missed.
+
+Parameters:
+
+guessedLetter (type: string) - the user's current guess, represented as a string of length 1, the return value of handleUserInputLetterGuess
+secretWord (type: string) - the secret word returned by getWord
+hangmanWord (type: list of strings) - represents the currently displayed hangman, each element in the list represents a letter in the secret word and it is either the actual letter or "_" representing that the user has not yet guessed that letter
+missesLeft (type: int) - the number of misses the user has left
+
+Returns:
+
+Type: list
+
+A list with the following at each index:
+
+Index 0: (type: list of strings) the "new" hangmanWord based on the user's guess in guessedLetter, it should use the helper function updateHangmanWord to do this.
+Index 1: (type: int) an updated value for missesLeft based on the user's guess in guessedLetter
+Index 2: (type: bool) indication of whether the user made a correct guess, where True means the user guessed a letter in the word and False means the user missed
+
+     * @param guessedLetter
+     * @param secretWord
+     * @param missesLeft
+     * @return
+     */
+    public static ArrayList<Object> processUserGuess(String guessedLetter, String secretWord, int missesLeft){
+        //TODO Calculate updates to game state and return in an ArrayList.
+        //This should be an Array of Objects (Remember Wrapper Classes for primitives)
+        
+        return null;
     }
 
 

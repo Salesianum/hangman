@@ -1,5 +1,7 @@
 package Hangman.Main;
 
+import java.util.Scanner;
+
 /**
  * DO NOT MAKE CHANGES TO THE FIRST LINE OF CODE.
  * DO NOT MAKE CHANGES TO THE FIRST LINE OF CODE.
@@ -18,8 +20,10 @@ package Hangman.Main;
 
 
 public class App {
-   
+    public static Scanner readInput = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
+        Integer num = 5;
+        num.intValue();
         boolean winLose;
         boolean continuePlaying = true;
         while(continuePlaying){
@@ -27,7 +31,9 @@ public class App {
             winLose = RunGame.play(); 
             //TODO: calc win / loss
             //TODO: do you want to play again?
+            readInput.nextLine();
         }
         //TODO: Print Win / Loss
+        readInput.close();
     }
 }

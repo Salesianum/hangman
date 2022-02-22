@@ -24,6 +24,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         boolean winLose;
         boolean continuePlaying = true;
+        
         while(continuePlaying){
             //this will run your game and return true or false.
             winLose = RunGame.play(); 

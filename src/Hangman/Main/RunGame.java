@@ -49,12 +49,12 @@ public class RunGame {
      *      Type: string
      *      A string that should be displayed to the user at each turn. Like so:
      *          letters you've guessed: SPACE_SEPARATED_STR_OF_LETTERSGUESSED
-     *          misses remaining = MISSESLEFT
+     *          misses remaining: MISSESLEFT
      *          SPACE_SEPARATED_STR_OF_HANGMANWORD
      * 
      *      EXAMPLE OF OUTPUT STRING:
      *          letters you've guessed: a e i o s u
-     *          misses remaining = 4
+     *          misses remaining: 4
      *          s _ _ _ o o _
      * 
      * */
@@ -138,7 +138,7 @@ Index 2: (type: bool) indication of whether the user made a correct guess, where
     public static ArrayList<Object> processUserGuess(String guessedLetter, String secretWord, int missesLeft){
         //TODO Calculate updates to game state and return in an ArrayList.
         //This should be an Array of Objects (Remember Wrapper Classes for primitives)
-        
+        ArrayList<Object> gameInfo = new ArrayList<Object>();
         return null;
     }
 

@@ -31,7 +31,7 @@ public class RunGame {
     public static boolean play(){
         //initialize any variables you may need
         String secretWord = LoadFile.getWord();
-
+        System.out.println("my secret word: " +secretWord);
         //begin the while loop to play the game.
 
 
@@ -84,7 +84,10 @@ public class RunGame {
         //TODO prompt a user guess and verify it is a valid guess.
         //Return the valid guess as a string.
         String guess = "";
-       
+       //take input from user
+       guess = App.readInput.nextLine();
+       //validate input
+       //return letter
         return guess;
     }
 
@@ -135,7 +138,7 @@ Index 2: (type: bool) indication of whether the user made a correct guess, where
      * @param missesLeft
      * @return
      */
-    public static ArrayList<Object> processUserGuess(String guessedLetter, String secretWord, int missesLeft){
+    public static ArrayList<Object> processUserGuess(String guessedLetter, String secretWord, ArrayList<String> hangmanWord, int missesLeft){
         //TODO Calculate updates to game state and return in an ArrayList.
         //This should be an Array of Objects (Remember Wrapper Classes for primitives)
         ArrayList<Object> gameInfo = new ArrayList<Object>();

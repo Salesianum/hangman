@@ -18,6 +18,10 @@ public class ProcessGuessTest {
         guesses.add("y");
         guesses.add("t");
         int misses = 2;
+        ArrayList<String> hangmanOld = new ArrayList<String>();
+        hangmanOld.add("h");
+        hangmanOld.add("_");
+        hangmanOld.add("t");
         ArrayList<String> hangmanUpdated = new ArrayList<String>();
         hangmanUpdated.add("h");
         hangmanUpdated.add("a");
@@ -26,11 +30,15 @@ public class ProcessGuessTest {
         holder.add(hangmanUpdated);
         holder.add(misses);
         holder.add(true);
-        assertEquals(holder, RunGame.processUserGuess(guess, "hat", misses));
+        assertEquals(holder, RunGame.processUserGuess(guess, "hat", hangmanOld, misses));
     }
 
     @Test
     void processGuessTest2(){
+        ArrayList<String> hangmanOld = new ArrayList<String>();
+        hangmanOld.add("h");
+        hangmanOld.add("_");
+        hangmanOld.add("t");
         String guess = "a";
         ArrayList<String> guesses = new ArrayList<String>();
         guesses.add("h");
@@ -45,6 +53,6 @@ public class ProcessGuessTest {
         holder.add(hangmanUpdated);
         holder.add(misses+1);
         holder.add(false);
-        assertEquals(holder, RunGame.processUserGuess(guess, "hot", misses));
+        assertEquals(holder, RunGame.processUserGuess(guess, "hot", hangmanOld, misses));
     }
 }

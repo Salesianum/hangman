@@ -1,7 +1,5 @@
 package Hangman.Main;
 
-import java.util.ArrayList;
-
 /**
  *  THIS WILL RUN THE GAME LOGIC. KEEPING TRACK OF THE ANSWER, NUMBER OF GUESSES, GUESSES MADE,
  *  AND PROGRESS IN GUESSING THE WORD.
@@ -59,7 +57,7 @@ public class RunGame {
      * 
      * */
 
-    public static String createDisplayString(ArrayList<String> lettersGuessed, int missesRemaining, ArrayList<String> hangmanWord){
+    public static String createDisplayString(String[] lettersGuessed, int missesRemaining, String[] hangmanWord){
         //TODO take all contents of the game state and print it in a legible state
         //it should look similar to the example above.
         return null;
@@ -80,7 +78,7 @@ public class RunGame {
      */
 
 
-    public static String handleUserInputLetterGuess(ArrayList<String> lettersGuessed, String displayString){
+    public static String handleUserInputLetterGuess(String[] lettersGuessed, String displayString){
         //TODO prompt a user guess and verify it is a valid guess.
         //Return the valid guess as a string.
         String guess = "";
@@ -92,7 +90,7 @@ public class RunGame {
     }
 
     /**
-     * Returns: Type: ArrayList<String>
+     * Returns: Type: String[]
      *      The new hangmanWord, which is a list of strings where each string is a single letter either corresponding
      *      to the same letter in secretWord or '_' if the user has not guessed the letter yet in the game.
      * 
@@ -105,7 +103,7 @@ public class RunGame {
      * Returns ["c", "a", "_"]
      */
 
-    public static ArrayList<String> updateHangmanWord(String guessedLetter, String secretWord, ArrayList<String> hangmanWord){
+    public static String[] updateHangmanWord(String guessedLetter, String secretWord, String[] hangmanWord){
         //TODO take the original hangman word and update it to include the guessed letter
         //for each index of the letter
         return hangmanWord;
@@ -138,10 +136,10 @@ Index 2: (type: bool) indication of whether the user made a correct guess, where
      * @param missesLeft
      * @return
      */
-    public static ArrayList<Object> processUserGuess(String guessedLetter, String secretWord, ArrayList<String> hangmanWord, int missesLeft){
-        //TODO Calculate updates to game state and return in an ArrayList.
+    public static Object[] processUserGuess(String guessedLetter, String secretWord, String[] hangmanWord, int missesLeft){
+        //TODO Calculate updates to game state and return in an Array
         //This should be an Array of Objects (Remember Wrapper Classes for primitives)
-        ArrayList<Object> gameInfo = new ArrayList<Object>();
+        Object[] gameInfo = new Object[3];
         return null;
     }
 

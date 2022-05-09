@@ -13,46 +13,21 @@ public class ProcessGuessTest {
     @Test
     void processGuessTest(){
         String guess = "a";
-        ArrayList<String> guesses = new ArrayList<String>();
-        guesses.add("h");
-        guesses.add("y");
-        guesses.add("t");
         int misses = 2;
-        ArrayList<String> hangmanOld = new ArrayList<String>();
-        hangmanOld.add("h");
-        hangmanOld.add("_");
-        hangmanOld.add("t");
-        ArrayList<String> hangmanUpdated = new ArrayList<String>();
-        hangmanUpdated.add("h");
-        hangmanUpdated.add("a");
-        hangmanUpdated.add("t");
-        ArrayList<Object> holder = new ArrayList<Object>();
-        holder.add(hangmanUpdated);
-        holder.add(misses);
-        holder.add(true);
+        String[] hangmanOld = {"h", "_", "t"};
+        String[] hangmanUpdated = {"h", "a", "t"};
+
+        Object[] holder = {hangmanUpdated, misses, true};
         assertEquals(holder, RunGame.processUserGuess(guess, "hat", hangmanOld, misses));
     }
 
     @Test
     void processGuessTest2(){
-        ArrayList<String> hangmanOld = new ArrayList<String>();
-        hangmanOld.add("h");
-        hangmanOld.add("_");
-        hangmanOld.add("t");
+        String[] hangmanOld = {"h", "_", "t"};
         String guess = "a";
-        ArrayList<String> guesses = new ArrayList<String>();
-        guesses.add("h");
-        guesses.add("e");
-        guesses.add("t");
         int misses = 2;
-        ArrayList<String> hangmanUpdated = new ArrayList<String>();
-        hangmanUpdated.add("h");
-        hangmanUpdated.add("_");
-        hangmanUpdated.add("t");
-        ArrayList<Object> holder = new ArrayList<Object>();
-        holder.add(hangmanUpdated);
-        holder.add(misses+1);
-        holder.add(false);
+        String[] hangmanUpdated = {"h", "_", "t"};
+        Object[] holder = {hangmanUpdated, misses+1, true};
         assertEquals(holder, RunGame.processUserGuess(guess, "hot", hangmanOld, misses));
     }
 }
